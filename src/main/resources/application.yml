@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: domain-events
+  datasource:
+    url: jdbc:postgresql://localhost:5432/domain_events
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
